@@ -1,6 +1,14 @@
 #!/bin/bash
 
-sleep 1 && curl -s https://raw.githubusercontent.com/MrN1x0n/MrN1x0n/main/logo.sh | bash && sleep 1
+# set vars
+sudo apt-get update && sudo apt-get upgrade -y
+
+sudo apt-get install curl wget jq libpq-dev libssl-dev \
+build-essential pkg-config openssl ocl-icd-opencl-dev \
+libopencl-clang-dev libgomp1 -y
+
+#logo
+curl -s https://raw.githubusercontent.com/MrN1x0n/MrN1x0n/main/logo.sh | bash && sleep 1
 
 sleep 2
 
